@@ -14,21 +14,21 @@ Now you have zookeeper and kafka running on 2181 and 9092 port respectively.
 
 # Topcs 1:
 
-Topic
-producer
-consumer
-partition
-replica
-offset: read the data from each partition with current offset
-earliest : read the data from each partition from start offset
-offset-commit in earliest: by consumer 
-Backpressure
-soution of backpressure: more number of consumers
-consumer group: consumer_group_id ="payment_data" [ one consumer one data partitioon only from same group ]
+- Topic
+- producer
+- consumer
+- partition
+- replica
+- offset: read the data from each partition with current offset
+- earliest : read the data from each partition from start offset
+- offset-commit in earliest: by consumer 
+- Backpressure
+  * soution of backpressure: more number of consumers
+- consumer group: consumer_group_id ="payment_data" [ one consumer one data partitioon only from same group ]
  g1-c1 -> p0, p1  g1-c2 -> p2,p3  [ at max no_of_consumers = no_of_partitions]
 
-sync commit - not concern latency, data consistency, avoid data loss
-async commit - data loss , latency imp
+- sync commit - not concern latency, data consistency, avoid data loss
+- async commit - data loss , latency imp
 
 
 
